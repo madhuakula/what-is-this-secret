@@ -7,7 +7,7 @@ This program is a simple secrets checker utility, give any found secret key and 
 * Run using CLI
 
 ```bash
-what-is-this-secret key "AKIAIOSFODNN7EXAMPLE"
+what-is-this-secret search -k "AKIAIOSFODNN7EXAMPLE"
 ```
 
 * Run in server mode, then navigate to [http://localhost:8000](http://localhost:8000)
@@ -15,6 +15,8 @@ what-is-this-secret key "AKIAIOSFODNN7EXAMPLE"
 ```bash
 what-is-this-secret server
 ```
+
+![](what-is-this-secret.png)
 
 * Using the curl with API in server mode
 
