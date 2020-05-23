@@ -1,5 +1,10 @@
 # what-is-this-secret
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://spdx.org/licenses/MIT.html)
+
+
+[https://wits.madhuakula.com](https://wits.madhuakula.com)
+
 This program is a simple secrets checker utility, give any found secret key and it identifies which service that key belongs to in the real-world
 
 ## Usage
