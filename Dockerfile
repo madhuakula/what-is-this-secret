@@ -14,7 +14,7 @@ RUN adduser \
     --no-create-home \
     --uid "${UID}" \
     "${USER}"
-WORKDIR $GOPATH/src/madhuakula/secrets-check/
+WORKDIR $GOPATH/src/madhuakula/what-is-this-secret/
 COPY . .
 
 # Fetch dependencies.
@@ -23,7 +23,7 @@ RUN go get -d -v
 # Build the binary
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
     -ldflags='-w -s -extldflags "-static"' -a \
-    -o /go/bin/secrets-check .
+    -o /go/bin/what-is-this-secret .
 
 # STEP 2 build a small image
 FROM scratch
@@ -35,10 +35,10 @@ COPY --from=builder /etc/passwd /etc/passwd
 COPY --from=builder /etc/group /etc/group
 
 # Copy our static executable
-COPY --from=builder /go/bin/secrets-check /go/bin/secrets-check
+COPY --from=builder /go/bin/what-is-this-secret /go/bin/what-is-this-secret
 
 # Use an unprivileged user.
 USER appuser:appuser
 
-# Run the secrets-check binary.
-ENTRYPOINT ["/go/bin/secrets-check"]
+# Run the what-is-this-secret binary.
+ENTRYPOINT ["/go/bin/what-is-this-secret"]
