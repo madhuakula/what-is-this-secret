@@ -1,7 +1,6 @@
 # what-is-this-secret
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://spdx.org/licenses/MIT.html)
-
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=for-the-badge)](LICENSE)
 
 [https://wits.madhuakula.com](https://wits.madhuakula.com)
 
