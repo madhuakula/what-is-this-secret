@@ -1,3 +1,6 @@
+package main
+
+const allRules = `
 {
     "rules": [
         {
@@ -154,3 +157,4 @@
         }
     ]
 }
+`

@@ -6,7 +6,6 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
-	"os"
 	"regexp"
 	"strings"
 	"time"
@@ -56,7 +55,7 @@ func setupRouter() *gin.Engine {
 	r.Use(gin.Recovery())
 
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "/html/index.tmpl", gin.H{})
+		c.HTML(http.StatusOK, "/static/index.tmpl", gin.H{})
 	})
 
 	// Ping test
@@ -76,15 +75,18 @@ func cliSecretCheck(c *cli.Context) error {
 }
 
 func secretCheck(arg string) string {
-	jsonFile, err := os.Open("rules.json")
-	if err != nil {
-		fmt.Println(err)
-	}
-	defer jsonFile.Close()
+	// rulesData, err := os.Open("./static/rules.json")
+	// if err != nil {
+	// 	fmt.Println(err)
+	// }
+	// defer rulesData.Close()
 
-	byteValue, _ := ioutil.ReadAll(jsonFile)
-	var rules Rules
-	json.Unmarshal(byteValue, &rules)
+	// byteValue, _ := ioutil.ReadAll(rulesData)
+	// var rules Rules
+
+	rules := &Rules{}
+
+	json.Unmarshal([]byte(allRules), &rules)
 
 	for i := 0; i < len(rules.Rules); i++ {
 		matched, _ := regexp.MatchString(rules.Rules[i].RegExpresession, arg)
