@@ -75,17 +75,7 @@ func cliSecretCheck(c *cli.Context) error {
 }
 
 func secretCheck(arg string) string {
-	// rulesData, err := os.Open("./static/rules.json")
-	// if err != nil {
-	// 	fmt.Println(err)
-	// }
-	// defer rulesData.Close()
-
-	// byteValue, _ := ioutil.ReadAll(rulesData)
-	// var rules Rules
-
 	rules := &Rules{}
-
 	json.Unmarshal([]byte(allRules), &rules)
 
 	for i := 0; i < len(rules.Rules); i++ {

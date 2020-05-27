@@ -34,8 +34,7 @@ func main() {
 
 	app.Commands = []*cli.Command{
 		{
-			Name: "search",
-			// Aliases: []string{""},
+			Name:  "search",
 			Usage: "Search the secret key",
 
 			Flags: []cli.Flag{
@@ -46,15 +45,10 @@ func main() {
 					Required: true,
 				},
 			},
-			// Action: func(c *cli.Context) error {
-			// 	secretCheck(c.String("key"))
-			// 	return nil
-			// },
 			Action: cliSecretCheck,
 		},
 		{
-			Name: "server",
-			// Aliases: []string{""},
+			Name:   "server",
 			Usage:  "Run the what-is-this-secret in server mode",
 			Action: runServer,
 		},
