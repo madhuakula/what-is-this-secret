@@ -1,6 +1,9 @@
 # what-is-this-secret
 
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=for-the-badge)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/madhuakula/what-is-this-secret/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/madhuakula/what-is-this-secret.svg)](https://github.com/madhuakula/what-is-this-secret/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/madhuakula/what-is-this-secret)](https://goreportcard.com/report/github.com/madhuakula/what-is-this-secret)
+
 
 [https://wits.madhuakula.com](https://wits.madhuakula.com)
 
